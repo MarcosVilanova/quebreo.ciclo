@@ -1,0 +1,58 @@
+body{
+    margin:0;
+}
+.navFundo{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.btn_toggle {
+    border: none !important;
+    color: #ffffff !important;
+    filter: invert(1) !important;
+
+}
+
+.btn_toggle:focus {
+    box-shadow: none;
+}
+
+.btn_toggle:not(.collapsed) .navbar-toggler-icon {
+    background-image: url("../../assets/fechar.png");
+    width: 40px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    filter: invert(1) !important;
+}
+.btnDenuncia
+{
+    background-color: #603fad;
+    border: none;
+    border-radius: 3rem !important;
+    padding: 0.8rem 2rem !important;
+    text-decoration: none;
+    color: white;
+    font-weight: 450;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.btnDenuncia:hover
+{
+    background-color: #371668;
+    font-weight: 480;
+    transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+    .nav_link {
+        border-bottom: 1px solid #ad433f;
+        width: 80%;
+    }
+    .btnDenuncia
+    { display: block;      /* ocupa toda a linha */
+        margin: 0 auto;      /* centraliza horizontalmente */
+        text-align: center;  /* centraliza o texto dentro do botão */
+        margin-bottom: 3rem; /* exemplo de margem inferior no mobile */
+        width: 40%;
+    }
+
+}
