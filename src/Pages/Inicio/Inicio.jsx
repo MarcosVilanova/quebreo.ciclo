@@ -3,7 +3,7 @@ import './Inicio.css'
 function Inicio() {
 
   return (
-      <h1 className="fullscreen-center">Pagina Inicio</h1>
+      <h1 className="fullscreen-center">Em construção...</h1>
   )
 }
 
