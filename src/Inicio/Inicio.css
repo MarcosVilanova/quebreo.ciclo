@@ -1,0 +1,15 @@
+body{
+    margin:0;
+}
+.navFundo{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.btnDenuncia {
+    background-color: #391849 !important;
+    border: none !important;
+    border-radius: 3rem !important;
+    padding: 0.8rem 2rem !important;
+}
+
