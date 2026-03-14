@@ -10,7 +10,7 @@ import {Container, Nav, Navbar } from "react-bootstrap";
 function Navigation() {
     return (
         <>
-            <Navbar expand="md" className="fixed-top navigation">
+            <Navbar expand="md" className=" navigation">
                 <Container>
                     <Navbar.Brand as={NavLink} to="/">
                         <img

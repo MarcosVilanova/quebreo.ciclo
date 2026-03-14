@@ -5,3 +5,24 @@
     height: 100vh;
     text-align: center;
 }
+
+.grafico_section{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #603fad;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 3rem;
+
+}
+
+
+.grafico_card{
+    background: transparent;
+    padding: 30px;
+    border: #910e0e solid 1px;
+    border-radius: 2rem;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
