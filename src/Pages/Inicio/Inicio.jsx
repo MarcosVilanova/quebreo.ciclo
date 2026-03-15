@@ -1,5 +1,5 @@
 import React from "react";
-import "./inicio.css";
+import "./Inicio.css";
 
 export default function CicloSection() {
     return (
@@ -10,7 +10,7 @@ export default function CicloSection() {
                     <h2 id="ciclo-title" className="ciclo-title">
                        QUEBRE O CICLO DA VIOLÊNCIA
                     </h2>
-                  
+
                 </header>
 
                 {/* Gráfico */}
