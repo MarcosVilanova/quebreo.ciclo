@@ -16,7 +16,8 @@ function Navigation() {
                         <img
                             src={logo}
                             alt="Logo"
-                            style={{ height: "7.6rem", width: "auto" }}
+                            style={{ height: "5rem", width: "auto" }}
+                            className="ms-4 ms-md-0"
                         />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="btn_toggle" />
