@@ -28,11 +28,15 @@
 
 
 
+/* CSS para centralizar o SVG */
+.ps {
+    display: flex;           /* ativa flexbox */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
 
+}
 
-
-
-
-
-
-
+.ciclo-svg {
+    width: 100%;      /* ocupa toda a largura disponível */
+    max-width: 800px; /* mantém o tamanho original máximo */
+}
