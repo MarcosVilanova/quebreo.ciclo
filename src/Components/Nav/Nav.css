@@ -1,41 +1,49 @@
-/* Nav.css */
-.navigation {
-
-    font-family: 'Poppins', sans-serif;
+/* PRIMEIRA NAV */
+.Nav01
+{
+ background-color: #603fad;
+}
+.Nav01 a,
+.Nav01 span
+{
+    background-color: transparent;
+    text-decoration: none;
+    color: #F8F8F8;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.3rem 0;
 }
 
 
-
-
-.btn_toggle {
+/* TOGGLE DE COLAPSE  */
+.btn_toggle
+{
     border: none;
     filter: invert(1);
 }
-
-.btn_toggle .navbar-toggler-icon {
+.btn_toggle .navbar-toggler-icon
+{
     background-image: url('../../assets/Icon&logo/toggle.png');
     filter: invert(1) !important;
     width: 3.75rem;
     height: 3.75rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-.btn_toggle:focus {
+.btn_toggle:focus
+{
     box-shadow: none;
 }
-
-.btn_toggle:not(.collapsed) .navbar-toggler-icon {
+.btn_toggle:not(.collapsed) .navbar-toggler-icon
+{
     background-image: url("../../assets/Icon&logo/fechar.png");
     width: 3.75rem;
     height: 3.75rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
-
-
-
-.nav_link {
+/* SEGUNDA NAV - PRINCIPAL */
+.nav_link
+{
     font-size: 1rem;
     color: #543782 !important;
     font-weight: 500;
@@ -60,10 +68,6 @@
     background-color: #371668;
     transform: scale(1.01);
 }
-
-
-
-
 
 @media (max-width: 767px) {
     .nav_link {

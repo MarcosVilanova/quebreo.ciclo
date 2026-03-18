@@ -1,112 +1,38 @@
-:root{
-    --bg: #f7f7f9;
-    --ink: #241b35;
-    --muted: #5b5570;
-}
 
-.ciclo-wrap{
-    background: var(--bg);
+.tituloInicio
+{
     padding: clamp(24px, 5vw, 64px) 0;
 }
 
-.ciclo-container{
+.tituloContainer
+{
     max-width: min(1180px, 92vw);
     margin: 0 auto;
     display: grid;
-    gap: 28px;
-}
-
-.ciclo-header{
     text-align: center;
-    display: grid;
-    gap: 8px;
-}
 
-.ciclo-title{
-    margin: 0;
-    color: var(--ink);
+}
+.tituloContainer h1
+{
     font-weight: 800;
-    letter-spacing: .4px;
-    font-size: clamp(22px, 3.8vw, 44px);
+    letter-spacing: 0.1rem;
+    font-size: clamp(1.625rem, 3.8vw, 2.75rem);
     line-height: 1.1;
 }
-
-.ciclo-subtitle{
-    margin: 0 auto;
-    color: var(--muted);
-    max-width: 48ch;
+.tituloContainer p
+{
     font-size: clamp(14px, 1.6vw, 18px);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-.ciclo-graph{
-    /* Mantém proporção quadrada e escala fluida */
-    width: min(92vw, 960px);
-    aspect-ratio: 1/1;
-    margin: 0 auto;
-    position: relative;
-}
 
-.ciclo-svg{
-    width: 100%;
-    height: 100%;
-    display: block;
-}
 
-/* Rótulos em volta do círculo usando foreignObject */
-.labels{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-    pointer-events: none; /* não impedir interação no SVG */
-}
 
-.label{
-    position: absolute;
-    display: grid;
-    gap: 2px;
-    background: rgba(255,255,255,.75);
-    backdrop-filter: blur(2px);
-    border-radius: 6px;
-    padding: 6px 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.07);
-    color: #2a2150;
-    font-size: clamp(10px, 1.4vw, 13px);
-    text-transform: none;
-}
 
-/* Posições relativas ao viewBox do SVG (ajustadas para centro visual) */
-.label-1{ /* direita-superior */
-    top: 10%;
-    right: 6%;
-}
-.label-2{ /* base (centro inferior) */
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 6%;
-    color: #b02a37;
-}
-.label-3{ /* esquerda-superior */
-    top: 10%;
-    left: 6%;
-    color: #6a5acd;
-}
 
-.label strong{
-    font-weight: 800;
-    letter-spacing: .2px;
-}
-.label span{
-    line-height: 1.1;
-}
 
-/* Melhorias em telas muito pequenas */
-@media (max-width: 420px){
-    .label{
-        padding: 4px 8px;
-    }
-    .label-1, .label-3{
-        top: 8%;
-    }
-}
+
+
+
+
+
