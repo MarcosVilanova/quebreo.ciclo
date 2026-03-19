@@ -1,12 +1,16 @@
 import './Nav.css'
 // IMAGENS
 import logo from '../../assets/Icon&logo/logo.png'
+import toggleAbrir from '../../assets/Icon&logo/toggle.png'
+import toggleFechar from  '../../assets/Icon&logo/fechar.png'
 // REACT
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 // BOOTSTRAP
 import {Container, Nav, Navbar } from "react-bootstrap";
 
 function Navigation() {
+    const [open, setOpen] = useState(false);
     return (
         <>
             <section>
@@ -41,7 +45,15 @@ function Navigation() {
                             className="ms-4 ms-md-0"
                         />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" aria-label="Toggle navigation"  className="btn_toggle" />
+
+                    <Navbar.Toggle onClick={() => setOpen(!open)} aria-controls="basic-navbar-nav" className="btn_toggle">
+                        <img
+                            src={open ? toggleFechar : toggleAbrir}
+                            alt="menu"
+                            className="toggle-icon"
+                        />
+                    </Navbar.Toggle>
+
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto align-items-center mb-4 mb-md-0">
                             <Nav.Link as={NavLink} to="/" className="px-4 nav_link">

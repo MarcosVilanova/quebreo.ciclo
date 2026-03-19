@@ -16,33 +16,30 @@
 
 
 /* TOGGLE DE COLAPSE  */
-.btn_toggle
+/* TOGGLE DE COLAPSE  */
+.btn_toggle{
+    border: none;
+
+}
+.toggle-icon
 {
     border: none !important;
-    filter: invert(1) !important;
-}
-.btn_toggle .navbar-toggler-icon {
-    background-image: url('../../assets/Icon&logo/toggle.png') !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 3.75rem;
     height: 3.75rem;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
 }
 .btn_toggle:focus
 {
     box-shadow: none !important;
 }
-.btn_toggle:not(.collapsed) .navbar-toggler-icon
-{
-    background-image: url("../../assets/Icon&logo/fechar.png") !important;
-    width: 3.75rem;
-    height: 3.75rem;
-    transition: background-color 0.3s ease, transform 0.2s ease !important;
-}
-.btn_toggle .navbar-toggler-icon {
-    background-image: none !important; /* REMOVE o SVG do Bootstrap */
-}
+
+
+
+
+
+
+
+
 /* SEGUNDA NAV - PRINCIPAL */
 .nav_link
 {
