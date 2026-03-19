@@ -18,27 +18,27 @@
 /* TOGGLE DE COLAPSE  */
 .btn_toggle
 {
-    border: none;
-    filter: invert(1);
+    border: none !important;
+    filter: invert(1) !important;
 }
 .btn_toggle .navbar-toggler-icon
 {
-    background-image: url('../../assets/Icon&logo/toggle.png');
+    background-image: url('../../assets/Icon&logo/toggle.png') !important;
     filter: invert(1) !important;
     width: 3.75rem;
     height: 3.75rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
 }
 .btn_toggle:focus
 {
-    box-shadow: none;
+    box-shadow: none !important;
 }
 .btn_toggle:not(.collapsed) .navbar-toggler-icon
 {
-    background-image: url("../../assets/Icon&logo/fechar.png");
+    background-image: url("../../assets/Icon&logo/fechar.png") !important;
     width: 3.75rem;
     height: 3.75rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
 }
 
 /* SEGUNDA NAV - PRINCIPAL */
