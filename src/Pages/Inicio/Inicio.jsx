@@ -94,28 +94,8 @@ export default function CicloSection() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <div className="mobile-svg">
-                        <svg width="100%" viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="100%" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
 
                             <defs>
                                 <marker
