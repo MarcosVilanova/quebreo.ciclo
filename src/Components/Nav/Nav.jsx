@@ -72,7 +72,7 @@ function Navigation() {
                         <a href={"tel:180"} target="_blank" className="btnDenuncia">
                             Denuncie
                         </a>
-                    </Navbar.Collapse>
+                </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>
