@@ -1,5 +1,5 @@
 import { Container, Accordion } from 'react-bootstrap';
-import { procedimentos } from './Apos-a-denuncia';
+import { procedimentos } from './Data.js';
 import './Apos-a-denuncia.css';
 
 function AposADenuncia() {
