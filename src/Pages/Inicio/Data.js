@@ -39,16 +39,10 @@ export const canaisApoio = [
         link: "tel:180"
     },
     {
-        titulo: "Apoio Psicológico",
-        descricao: "Escuta, acolhimento e orientação.",
-        contato: "Saiba mais",
-        link: "#canais"
-    },
-    {
         titulo: "Direitos da Mulher",
         descricao: "Informações sobre proteção e direitos.",
         contato: "Leia mais",
-        link: "#saibaMais"
+        link: "/apoio-e-direitos"
     }
 ];
 export const servicos = [
@@ -84,22 +78,22 @@ export const servicos = [
     },
     {
         titulo: "Violência ",
-        titulo2:"Patrimonial",
-        itens: [
-            "Controle financeiro",
-            "Destruição de bens",
-            "Retenção de documentos",
-            "Impedir trabalho"
-        ]
-    },
-    {
-        titulo: "Violência ",
         titulo2:"Moral",
         itens: [
             "Calúnia",
             "Difamação",
             "Injúria",
             "Ofensas"
+        ]
+    },
+    {
+        titulo: "Violência ",
+        titulo2:"Patrimonial",
+        itens: [
+            "Controle financeiro",
+            "Destruição de bens",
+            "Retenção de documentos",
+            "Impedir trabalho"
         ]
     }
 ];

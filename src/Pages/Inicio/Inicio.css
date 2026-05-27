@@ -136,7 +136,7 @@
 .tiposViolenciaCard:hover
 {
     box-shadow: 0 14px 30px rgba(96, 63, 173, 0.13);
-    transform: translateY(-3px);
+    transform: translateY(-1px);
 }
 .tiposViolenciaBody
 {

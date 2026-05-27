@@ -1,136 +1,187 @@
-/* DASHBOARD STYLES */
-.icon-dash-container {
-  background: #f3f0ff;
-  padding: 40px;
-  border-radius: 25px;
+/* ================= DESIGN SYSTEM & LAYOUT ================= */
+.pagina-apoio-direitos {
+  color: #2f2a3d;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.text-destaque, .custom-accordion-header .accordion-button:not(.collapsed), .accordion-number, .mecanismo-tab-btn:hover, .mecanismo-tab-btn.is-active, .mecanismo-display-card h4, .documentos-box h6, .badge-info {
+  color: #603fad !important;
+}
+.bg-intercalado { 
+  background-color: #f8f9fa !important; 
+}
+.bg-white, .mecanismo-display-card { 
+  background-color: #ffffff !important; 
+}
+.max-width-md, .mecanismo-display-card { 
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+.section-title-wrapper { 
+  text-align: center; 
+  margin-bottom: 2.5rem; 
+}
+.section-title-wrapper h2 { 
+  font-weight: 700; 
+  font-size: clamp(1.5rem, 3vw, 2rem); 
+  margin-bottom: 0.5rem; 
+}
+.section-title-wrapper p { 
+  color: #666370; 
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem); 
 }
 
-.dash-layout {
+/* ================= COMPONENTES FLEXÍVEIS FLUIDOS ================= */
+.abas-flex-container, .custom-accordion, .mecanismos-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+}
+.abas-flex-container { 
+  flex-wrap: wrap; 
+  gap: 2rem; 
+}
+.abas-sidebar { 
+  flex: 1 1 250px; 
+}
+.abas-conteudo-painel { 
+  flex: 9 1 450px; 
 }
 
-.dash-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+/* ================= LISTAS E NAVEGAÇÃO LATERAL ================= */
+.custom-list-group { 
+  border-radius: 0; 
 }
-
-.icon-circle {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  border: 2px solid #603fad;
-  background: white;
-  color: #603fad;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-circle.active {
-  background: #603fad;
-  color: white;
-  box-shadow: 0 0 15px rgba(96, 63, 173, 0.4);
-}
-
-.dash-content-panel {
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 650px;
-  min-height: 220px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  text-align: left;
-  /* Alinhado à esquerda para os tópicos ficarem bons */
-}
-
-.dash-content-panel h4 {
-  color: #603fad;
-  font-weight: 700;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.dash-list {
-  margin-top: 15px;
-  padding-left: 20px;
-  color: #555;
-}
-
-.dash-list li {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
-.dash-extra {
-  margin-top: 15px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #603fad;
-  text-align: center;
-}
-
-/* TABLET/DESKTOP DASHBOARD */
-@media (min-width: 768px) {
-  .dash-layout {
-    flex-direction: row;
-    justify-content: center;
-    gap: 50px;
-  }
-
-  .dash-icons {
-    flex-direction: column;
-  }
-}
-
-/* ABAS TÉCNICAS */
 .custom-list-group .list-group-item {
-  border: none;
-  padding: 0.85rem 1rem;
+  background: transparent; 
+  border: none; 
+  border-left: 3px solid transparent; 
+  padding: 0.85rem 1rem; 
+  font-weight: 500; 
+  color: #555261; 
+  transition: all 0.2s ease;
+}
+.custom-list-group .list-group-item.active, .custom-list-group .list-group-item:hover {
+  background-color: transparent !important; 
+  border-left-color: #603fad; 
   font-weight: 600;
-  background-color: #F8F8F8;
-  margin-bottom: 10px;
-  border-radius: 10px !important;
-  color: #4a416f;
-  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.custom-list-group .list-group-item.active {
-  background-color: #603fad !important;
-  color: #fff !important;
-  box-shadow: 0 10px 22px rgba(96, 63, 173, 0.18);
-  transform: translateX(8px);
+/* ================= CONTEÚDOS DAS ABAS E CARDS ================= */
+.content-area, .mecanismo-display-card { 
+  border-radius: 12px; 
+}
+.content-area { 
+  padding: clamp(1.25rem, 4vw, 2.25rem); 
+}
+.content-area h3 { 
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  margin-bottom: 1rem; 
+}
+.badge-info { 
+  display: inline-block; 
+  background: rgba(96, 63, 173, 0.08); 
+  padding: 0.4rem 0.8rem; 
+  border-radius: 6px; 
+  font-size: 0.9rem; 
+  font-weight: 600; 
+  margin-bottom: 1.25rem; 
+}
+.documentos-box { 
+  background: #fdfdff; 
+  border-left: 2px solid #e1dbec; 
+  padding: 1.25rem; 
+  margin-top: 1.5rem; 
+  font-size: 0.95rem; 
+}
+.documentos-box h6 { 
+  font-weight: 600; 
+  margin-bottom: 0.75rem; 
+}
+.documentos-box ul { 
+  margin: 0; 
+  padding-left: 1.2rem; 
+  color: #555261; 
+}
+.documentos-box ul li { 
+  margin-bottom: 0.5rem;
 }
 
-.custom-list-group .list-group-item:not(.active):hover {
-  color: #603fad;
-  box-shadow: 0 8px 18px rgba(96, 63, 173, 0.08);
+/* ================= ACCORDION (MITOS) ================= */
+.custom-accordion { 
+  flex-direction: column; 
+  gap: 12px; 
+}
+.custom-accordion-item { 
+  border: none !important; 
+  border-bottom: 1px solid #eae8ed !important; 
+  background: transparent !important; 
+}
+.custom-accordion-header .accordion-button {
+  background: transparent !important; 
+  color: #2f2a3d !important; 
+  padding: 1.25rem 0; 
+  font-weight: 600; 
+  font-size: 1.05rem; 
+  box-shadow: none !important; 
+  display: flex; 
+  align-items: center; 
+  gap: 16px;
+}
+.custom-accordion-header .accordion-button::after { 
+  flex-shrink: 0; 
+  width: 1.25rem; 
+  height: 1.25rem; 
+  background-size: contain; 
+  filter: hue-rotate(220deg) saturate(150%); 
+}
+.accordion-number { 
+  font-weight: 700; 
+  font-size: 1rem; 
+  flex-shrink: 0; 
+}
+.accordion-title { 
+  flex: 1; line-height: 1.4; 
+}
+.custom-accordion-body { 
+  padding: 0 0 1.5rem 0 !important; 
+}
+.custom-accordion-body p, .mecanismo-display-card p { 
+  color: #555261; 
+  line-height: 1.65; 
+  margin: 0; 
+  font-size: 0.975rem; 
 }
 
-.content-area {
-  background: #fff;
-  line-height: 1.65;
+/* ================= MECANISMOS DE DEFESA ================= */
+.mecanismos-nav { 
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem; 
 }
-
-.valor-destaque {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #27ae60;
+.mecanismo-tab-btn {
+  background: transparent;
+  border: 1px solid #e1dbec;
+  color: #555261;
+  padding: 0.5rem 1.25rem; 
+  border-radius: 2rem;
+  font-size: 0.9rem; 
+  font-weight: 500; 
+  cursor: pointer; 
+  transition: all 0.2s ease;
 }
-
-.documentos-box {
-  background: #f3f0ff;
-  padding: 20px;
-  border-radius: 12px;
-  border-left: 5px solid #603fad;
-  line-height: 1.6;
-  margin-top: 1rem;
+.mecanismo-tab-btn:hover, .mecanismo-tab-btn.is-active {  
+  border-color: #603fad;
+}
+.mecanismo-display-card { 
+  padding: 2rem; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02); 
+  text-align: left; 
+}
+.mecanismo-display-card h4 { 
+  font-weight: 700; 
+  font-size: 1.25rem; 
+  margin-bottom: 0.75rem; 
+}
+.mecanismo-display-card p { 
+  font-size: 1rem; 
 }
