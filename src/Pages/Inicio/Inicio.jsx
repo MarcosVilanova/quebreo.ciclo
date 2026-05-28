@@ -1,5 +1,6 @@
 import './Inicio.css';
 import CicloSVG from './SVG/CicloSVG.jsx';
+import IMGfundo from '../../assets/Icon&logo/imgfundo.jpeg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,7 +13,8 @@ import { Container, Card } from 'react-bootstrap';
 export default function Inicio() {
   return (
     <>
-      <section className="headerSection">
+      <section className="headerSection inicioHeaderSection">
+        <img src={IMGfundo} alt="" className="inicioHeaderImage" aria-hidden="true" />
         <div className="headerContainer">
           <h1>
             QUEBRE O CICLO DA <span style={{ color: '#603fad' }}>VIOLÊNCIA DOMÉSTICA</span>
