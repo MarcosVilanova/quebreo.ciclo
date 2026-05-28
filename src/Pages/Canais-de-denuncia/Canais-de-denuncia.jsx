@@ -1,128 +1,131 @@
-import { Container, Card } from "react-bootstrap";
-import "./Canais-de-denuncia.css";
-import { canaisUrgencia, canaisPresenciais, canaisDigitais } from "./Canais-de-denuncia-Data.js";
+import { Container, Card } from 'react-bootstrap';
+import './Canais-de-denuncia.css';
+import { canaisUrgencia, canaisPresenciais, canaisDigitais } from './Canais-de-denuncia-Data.js';
 
 export default function CanaisDeDenuncia() {
-    return (
-        <>
-            {/* ── HEADER ── */}
-            <section className="headerSection">
-                <div className="headerContainer">
-                    <h1>CANAIS DE DENÚNCIA</h1>
-                    <p>Conheça os órgãos, aplicativos e serviços disponíveis para te proteger.</p>
-                </div>
-            </section>
+  return (
+    <>
+      <section className="headerSection">
+        <div className="headerContainer">
+          <h1>CANAIS DE DENÚNCIA</h1>
+          <p>Conheça os órgãos, aplicativos e serviços disponíveis para te proteger.</p>
+        </div>
+      </section>
 
-            {/* ── URGÊNCIA E EMERGÊNCIA ── */}
-            <section className="canaisApoio py-5">
-                <Container>
-                    <div className="text-center mb-5">
-                        <h2>Urgência e Emergência</h2>
-                        <p className="subtituloTipoViolencia">
-                            Canais diretos para quando a agressão estiver acontecendo ou houver risco imediato.
-                        </p>
+      <section className="canaisApoio py-5">
+        <Container>
+          <div className="text-center mb-5">
+            <h2>Urgência e Emergência</h2>
+            <p className="subtituloTipoViolencia">
+              Canais diretos para quando a agressão estiver acontecendo ou houver risco imediato.
+            </p>
+          </div>
+
+          <div className="gridCanais">
+            {canaisUrgencia.map((canal) => (
+              <Card key={canal.numero} className="cardCanal destaqueCanal">
+                <Card.Body className="d-flex flex-column">
+                  <h5 className="numeroUrgencia">{canal.numero}</h5>
+                  <h5 className="tituloUrgencia">{canal.titulo}</h5>
+                  <div style={{ textAlign: 'left', flexGrow: 1 }}>
+                    {canal.itens.map((item) => (
+                      <p key={`${item.rotulo ?? 'item'}-${item.texto}`}>
+                        {item.rotulo && <strong>{item.rotulo}: </strong>}
+                        {item.texto}
+                      </p>
+                    ))}
+                  </div>
+                  <a
+                    href={canal.link}
+                    className="btnCanal"
+                    aria-label={`${canal.titulo} - ${canal.linkTexto}`}
+                  >
+                    {canal.linkTexto}
+                  </a>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="introLei py-5">
+        <Container>
+          <div className="text-center mb-5">
+            <h2>Atendimento em Barretos/SP</h2>
+            <p className="subtituloTipoViolencia">
+              Órgãos físicos especializados em acolhimento e assistência.
+            </p>
+          </div>
+
+          <div className="gridCanais">
+            {canaisPresenciais.map((canal) => (
+              <Card key={canal.titulo} className="cardCanal">
+                <Card.Body>
+                  <h5>{canal.titulo}</h5>
+                  <span className="infoSecundaria">{canal.telefone}</span>
+                  <div className="cardTexto">
+                    <p>
+                      <strong>Endereço:</strong> {canal.endereco}
+                    </p>
+                    <p>
+                      <strong>Atendimento:</strong> {canal.atendimento}
+                    </p>
+                    <p>{canal.descricao}</p>
+                    {canal.complemento && <p>{canal.complemento}</p>}
+                    {canal.observacao && <p className="observacao">{canal.observacao}</p>}
+                  </div>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="canaisApoio py-5">
+        <Container>
+          <div className="text-center mb-5">
+            <h2>Canais Digitais, Aplicativos e Outros</h2>
+            <p className="subtituloTipoViolencia">
+              Ferramentas online e aplicativos gratuitos para registrar ocorrências, acionar ajuda
+              com rapidez e acessar serviços de proteção.
+            </p>
+          </div>
+
+          <div className="gridCanais">
+            {canaisDigitais.map((canal) => (
+              <Card key={canal.titulo} className="cardCanal cardDigital">
+                <Card.Body className="d-flex flex-column">
+                  <div className="cardDigitalTopo">
+                    <div className="logoCanal" aria-label={`Logo ${canal.titulo}`}>
+                      {canal.logo ? (
+                        <img src={canal.logo} alt={`Logo ${canal.titulo}`} />
+                      ) : (
+                        <span className="logoPlaceholder">LOGO</span>
+                      )}
                     </div>
-
-                    <div className="gridCanais">
-                        {canaisUrgencia.map((canal) => (
-                            <Card key={canal.numero} className="cardCanal destaqueCanal">
-                                <Card.Body className="d-flex flex-column">
-                                    <h5 className="numeroUrgencia">{canal.numero}</h5>
-                                    <h5 className="tituloUrgencia">{canal.titulo}</h5>
-                                    <div style={{ textAlign: "left", flexGrow: 1 }}>
-                                        {canal.itens.map((item) => (
-                                            <p key={`${item.rotulo ?? "item"}-${item.texto}`}>
-                                                {item.rotulo && <strong>{item.rotulo}: </strong>}
-                                                {item.texto}
-                                            </p>
-                                        ))}
-                                    </div>
-                                    <a href={canal.link} className="btnCanal" aria-label={`${canal.titulo} - ${canal.linkTexto}`}>{canal.linkTexto}</a>
-                                </Card.Body>
-                            </Card>
-                        ))}
+                    <div className="cardDigitalInfo">
+                      <h5>{canal.titulo}</h5>
+                      <div className="cardTexto">
+                        <p>{canal.descricao}</p>
+                        {canal.complemento && <p>{canal.complemento}</p>}
+                      </div>
                     </div>
-                </Container>
-            </section>
+                  </div>
 
-            {/* ── ATENDIMENTO PRESENCIAL ── */}
-            <section className="introLei py-5">
-                <Container>
-                    <div className="text-center mb-5">
-                        <h2>Atendimento em Barretos/SP</h2>
-                        <p className="subtituloTipoViolencia">
-                            Órgãos físicos especializados em acolhimento e assistência.
-                        </p>
-                    </div>
-
-                    <div className="gridCanais">
-                        {canaisPresenciais.map((canal) => (
-                            <Card key={canal.titulo} className="cardCanal">
-                                <Card.Body>
-                                    <h5>{canal.titulo}</h5>
-                                    <span className="infoSecundaria">{canal.telefone}</span>
-                                    <div className="cardTexto">
-                                        <p><strong>Endereço:</strong> {canal.endereco}</p>
-                                        <p><strong>Atendimento:</strong> {canal.atendimento}</p>
-                                        <p>{canal.descricao}</p>
-                                        {canal.complemento && <p>{canal.complemento}</p>}
-                                        {canal.observacao && (
-                                            <p className="observacao">{canal.observacao}</p>
-                                        )}
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        ))}
-                    </div>
-                </Container>
-            </section>
-
-            {/* ── CANAIS DIGITAIS ── */}
-            <section className="canaisApoio py-5">
-                <Container>
-                    <div className="text-center mb-5">
-                        <h2>Canais Digitais, Aplicativos e Outros</h2>
-                        <p className="subtituloTipoViolencia">
-                            Ferramentas online e aplicativos gratuitos para registrar ocorrências,
-                            acionar ajuda com rapidez e acessar serviços de proteção.
-                        </p>
-                    </div>
-
-                    <div className="gridCanais">
-                        {canaisDigitais.map((canal) => (
-                            <Card key={canal.titulo} className="cardCanal cardDigital">
-                                <Card.Body className="d-flex flex-column">
-
-                                    <div className="cardDigitalTopo">
-                                        <div className="logoCanal" aria-label={`Logo ${canal.titulo}`}>
-                                            {canal.logo
-                                                ? <img src={canal.logo} alt={`Logo ${canal.titulo}`} />
-                                                : <span className="logoPlaceholder">LOGO</span>
-                                            }
-                                        </div>
-                                        <div className="cardDigitalInfo">
-                                            <h5>{canal.titulo}</h5>
-                                            <div className="cardTexto">
-                                                <p>{canal.descricao}</p>
-                                                {canal.complemento && <p>{canal.complemento}</p>}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <a
-                                        href={canal.link ?? "#"}
-                                        className="btnCanal btnCanalDigital"
-                                        aria-label={`Acessar ${canal.titulo}`}
-                                    >
-                                        {canal.linkTexto ?? "Saiba mais"}
-                                    </a>
-
-                                </Card.Body>
-                            </Card>
-                        ))}
-                    </div>
-                </Container>
-            </section>
-        </>
-    );
+                  <a
+                    href={canal.link ?? '#'}
+                    className="btnCanal btnCanalDigital"
+                    aria-label={`Acessar ${canal.titulo}`}
+                  >
+                    {canal.linkTexto ?? 'Saiba mais'}
+                  </a>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+    </>
+  );
 }

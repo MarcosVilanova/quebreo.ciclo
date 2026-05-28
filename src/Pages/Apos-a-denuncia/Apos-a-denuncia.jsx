@@ -8,43 +8,32 @@ function AposADenuncia() {
       <section className="headerSection">
         <Container className="headerContainer">
           <h1>
-            COMO PROCEDER <span style={{ color: "#603fad" }}>APÓS A DENÚNCIA</span>
+            COMO PROCEDER <span style={{ color: '#603fad' }}>APÓS A DENÚNCIA</span>
           </h1>
           <p>Clique nos tópicos abaixo para entender cada etapa do seu processo de proteção.</p>
         </Container>
       </section>
 
       <section className="py-5">
-        {/* Adicionado a classe container do accordion */}
         <Container className="accordion-container">
           <div className="introConteudo text-center mb-5">
             <h2>Próximos Passos</h2>
             <p>
-              Após o registro da ocorrência, o caso segue para o juiz em até <strong>48 horas</strong>.
-              Veja seus direitos abaixo:
+              Após o registro da ocorrência, o caso segue para o juiz em até <strong>48 horas</strong>
+              . Veja seus direitos abaixo:
             </p>
           </div>
 
-          {/* ACCORDION COM CLASSES CUSTOMIZADAS */}
           <Accordion flush>
             {procedimentos.map((item) => (
-              <Accordion.Item
-                eventKey={item.id}
-                key={item.id}
-                className="accordion-item-custom"
-              >
+              <Accordion.Item key={item.id} eventKey={item.id} className="accordion-item-custom">
                 <Accordion.Header className="accordion-header-custom">
                   {item.titulo}
                 </Accordion.Header>
-
                 <Accordion.Body>
                   <div className="accordion-text">
                     <p>{item.conteudo}</p>
-                    {item.extra && (
-                      <div className="accordion-extra">
-                        {item.extra}
-                      </div>
-                    )}
+                    {item.extra && <div className="accordion-extra">{item.extra}</div>}
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
@@ -78,3 +67,4 @@ function AposADenuncia() {
 }
 
 export default AposADenuncia;
+
