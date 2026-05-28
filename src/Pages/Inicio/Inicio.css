@@ -2,7 +2,7 @@
 {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
 
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@
     object-fit: cover;
     object-position: center;
 
-    filter: brightness(0.45);
+    filter: brightness(0.7);
     pointer-events: none;
     user-select: none;
 }

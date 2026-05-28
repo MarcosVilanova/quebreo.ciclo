@@ -138,76 +138,7 @@ export default function ApoioEDireitos() {
         </Container>
       </section>
 
-      <section className="py-5">
-        <Container>
-          <div className="section-title-wrapper">
-            <h2>Tipos de Leis e a Lei Maria da Penha</h2>
-            <p>
-              Conhecer os instrumentos legais fortalece a denúncia e garante o acesso aos
-              direitos previstos na legislação brasileira.
-            </p>
-          </div>
-          <Row className="gap-y-4">
-            <Col lg={6}>
-              <div className="content-area">
-                <h3>Tipos de Leis</h3>
-                <p>Existem diversas normas que protegem vítimas de violência doméstica e familiar:</p>
-                <ul>
-                  <li>
-                    <strong>Lei Maria da Penha (Lei 11.340/2006)</strong>: principal instrumento
-                    para proteção contra violência doméstica e familiar contra a mulher.
-                  </li>
-                  <li>
-                    <strong>Código Penal</strong>: qualifica crimes como lesão corporal, ameaça,
-                    estupro e outros praticados no contexto doméstico.
-                  </li>
-                  <li>
-                    <strong>Estatuto da Criança e do Adolescente</strong>: protege os direitos de
-                    filhos e adolescentes em situações de violência familiar.
-                  </li>
-                  <li>
-                    <strong>Estatuto da Pessoa com Deficiência</strong>: prevê medidas específicas
-                    quando a vítima ou agressor tem deficiência.
-                  </li>
-                </ul>
-              </div>
-            </Col>
-            <Col lg={6}>
-              <div className="content-area">
-                <h3>Detalhes da Lei Maria da Penha</h3>
-                <p>
-                  A Lei Maria da Penha criou um sistema integrado de proteção, prevendo medidas
-                  legais imediatas e penas mais rigorosas para agressores.
-                </p>
-                <div className="documentos-box">
-                  <h6>Principais pontos</h6>
-                  <ul>
-                    <li>
-                      Cria medidas protetivas de urgência: afastamento do agressor, proibição de
-                      contato e de aproximação;
-                    </li>
-                    <li>
-                      Prevê atendimento especializado em delegacias, centros de referência e
-                      serviços de saúde;
-                    </li>
-                    <li>
-                      Estabelece pena mais grave para violência doméstica, com reclusão e
-                      possibilidade de perda de emprego ou função pública;
-                    </li>
-                    <li>
-                      Define violência física, psicológica, sexual, patrimonial e moral como
-                      formas de violência doméstica;
-                    </li>
-                    <li>
-                      Garante o acesso à assistência jurídica, social e psicológica à vítima.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+   
 
       <section className="py-5 bg-intercalado">
         <Container className="max-width-md text-center">
